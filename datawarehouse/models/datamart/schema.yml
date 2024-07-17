@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: dm_commodities
+    description: "Datamart table to consolidate commodity and commodity movement data."
+    columns:
+      - name: trade_date
+        description: "Transaction date."
+      - name: symbol_commodity
+        description: "Commodity symbol."
+      - name: closing_value
+        description: "Closing value of the commodity."
+      - name: action_type
+        description: "Type of action (e.g., buy, sell)."
+      - name: quantity_traded
+        description: "Quantity of the commodity traded."
+      - name: value
+        description: "Value of the trade (quantity_traded * closing_value)."
+      - name: gain
+        description: "Gain from the trade. Positive for sell, negative for buy."

@@ -11,7 +11,7 @@ sources:
             description: "Date of observation"
           - name: Close
             description: "Closing price of the commodity"
-          - name: simbolo
+          - name: symbol
             description: "Commodity symbol"
 
       - name: commodity_movements

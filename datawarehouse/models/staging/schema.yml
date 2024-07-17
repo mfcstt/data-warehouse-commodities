@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_commodities
+    description: "Staging table to prepare commodity data."
+    columns:
+      - name: trade_date
+        description: "Transaction date."
+      - name: closing_value
+        description: "Closing value of the commodity."
+      - name: symbol_commodity
+        description: "Commodity symbol."
+  - name: stg_commodities_movements
+    description: "Staging table to prepare commodity movements data."
+    columns:
+      - name: date_mov
+        description: "Transaction date."
+      - name: symbol_commodity
+        description: "Commodity symbol."
+      - name: action_type
