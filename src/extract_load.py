@@ -24,10 +24,13 @@ DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}?
 # Criar engine de conexão
 engine = create_engine(DATABASE_URL)
 
-def search_data(symbol, period='5d', interval='1d'):
+def search_data(symbol, period='1mo', interval='1d'):
     ticker = yf.Ticker(symbol)
     data = ticker.history(period=period, interval=interval)[['Close']]
     data['symbol'] = symbol
+    
+    data = data[(data.index >= '2024-06-01') & (data.index < '2024-07-01')]
+    
     return data
 
 def search_all_data(commodities):

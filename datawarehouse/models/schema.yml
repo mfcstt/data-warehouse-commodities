@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: postgres
+    schema: public
+    tables:
+      - name: commodities
+        description: "Historical commodity data"
+        columns:
+          - name: Date
+            description: "Date of observation"
+          - name: Close
+            description: "Closing price of the commodity"
+          - name: simbolo
+            description: "Commodity symbol"
+
+      - name: commodity_movements
+        description: "Commodity buy/sell movements"
+        columns:
+          - name: date
+            description: "Date of transaction"
+          - name: symbol
+            description: "Commodity symbol"
+          - name: action
+            description: "Action taken (buy/sell)"
+          - name: quantity
+            description: "Quantity of commodity"
